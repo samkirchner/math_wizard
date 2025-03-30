@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MATH WIZARD</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- KaTeX and auto-render -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  
+</head>
+<body>
+
+  <button class="toggle-sidebar" onclick="toggleSidebar()">☰ Chats</button>
+
+  <div class="sidebar" id="sidebar">
+    <ul id="chatList">
+      <li onclick="switchChat(0)">Chat 1</li>
+      <li onclick="switchChat(1)">Chat 2</li>
+      <li onclick="switchChat(2)">Chat 3</li>
+      <li onclick="switchChat(3)">Chat 4</li>
+      <li onclick="switchChat(4)">Chat 5</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div  class="drag-header" >
+        <h1>AI Math Solver</h1>
+    </div>      
+    <div id="chat">
+        <div id="messages"></div>
+        <textarea id="userInput" placeholder="Ask a math question..."></textarea>
+        <button onclick="sendMessage()">Send</button>
+    </div>   
+  </div>  
+
+  <script src="script.js"></script>
+  <script src="grab.js"></script>
+  
+</body>
+</html>
